@@ -26,14 +26,11 @@ const bot = new Client({
     }
 })();
 
-bot.on("interactionCreate", interaction => {
-    if(interaction.customId === "acceptrule"){
-        console.log("message id:", interaction.message.id);
-        const reply = interaction.reply(interaction.member.displayName);
-        reply.create
-    }
+bot.on("messageCreate", msg => {
+    // console.log("All channels: ", msg.guild.channels);
+    console.log(`${msg.channel.name}: <${msg.author.displayName}> ${msg.content}`);
+    // if(msg.content.includes("xq")) {msg.reply("ảo đít cọt thế đủ rồi")};
 })
-
 
 bot.login(process.env.BOT_TOKEN);
 

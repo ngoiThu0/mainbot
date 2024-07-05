@@ -80,7 +80,7 @@ module.exports = {
                 if (narutoInfo) {
                     console.log('Thông tin về nhân vật Naruto:', narutoInfo);
                     narutoInfo.media.nodes.forEach(element => {
-                        console.log(`# Anime/manga: ${element.title.native}`);
+                        console.log(`# Anime/manga: ${element.title.english}`);
                     });
                 }
                 const englishTitle = narutoInfo.media?.nodes[0]?.title?.english || '';
